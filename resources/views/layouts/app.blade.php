@@ -61,32 +61,16 @@
                                 </li>
                             @endif
                         @else
-                            <li class="nav-item dropdown ms-auto">
-                                <div class="d-flex flex-column col-lg-3">
-                                    <a id="navbarDropdown" class="nav-link dropdown-toggle gothamB" href="#"
-                                        role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
-                                        v-pre>
-                                        Hola
-                                        <span class="text-crema ms-2">
-                                            {{ Auth::user()->name }}
-                                        </span>
-                                        <img src="{{ asset('assets/img/AvatarM.png') }}" alt="Avatar" width="40"
-                                            class="ms-2">
-                                    </a>
-
-                                    <form class="d-flex search-input ms-auto">
-                                        @csrf
-                                        <input class="form-control rounded-pill" type="search" placeholder="Search"
-                                            aria-label="Search">
-                                        <img class="search-icon ms-2" src="{{ asset('assets/img/Buscar.png') }}"
-                                            alt="Search icon" width="25px">
-                                    </form>
-
-                                </div>
+                            <li class="nav-item dropdown">
+                                <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button"
+                                    data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                                    {{ Auth::user()->name }}
+                                </a>
 
                                 <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
                                     <a class="dropdown-item" href="{{ route('logout') }}"
-                                        onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
+                                        onclick="event.preventDefault();
+                                                     document.getElementById('logout-form').submit();">
                                         {{ __('Logout') }}
                                     </a>
 
