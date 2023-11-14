@@ -1,0 +1,61 @@
+@font-face {
+    font-family: 'gotham';
+    src: url('../fonts/GothamBook.otf');
+}
+
+@font-face {
+    font-family: 'gothamR';
+    src: url('../fonts/GothamBoldRegular.ttf');
+}
+
+@font-face {
+    font-family: 'gothamB';
+    src: url('../fonts/GothamBoldRegular.ttf');
+}
+
+.gothamText {
+    font-family: 'gotham' !important; 
+}
+
+.gothamR {
+    font-family: 'gothamR' !important;
+}
+
+.gothamB {
+    font-family: 'gothamB' !important;
+}
+
+.footer {
+    font-size: small;
+}
+
+.text-crema {
+    color: #f3e2d7 !important;
+}
+
+.search-input {
+    position: relative;
+}
+
+.search-input .search-icon {
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    width: 25px;
+    height: 25px;
+}
+
+.search-input .form-control {
+    padding-right: 40px;
+    padding-left: 35px;
+    height: 25px; /* added this line */
+}
+
+.search-input .form-control:focus {
+    box-shadow: none;
+}
+
+.search-input .form-control::placeholder {
+    color: #aaa;
+}
