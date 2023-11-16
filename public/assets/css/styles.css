@@ -32,7 +32,9 @@
 .text-crema {
     color: #f3e2d7 !important;
 }
-
+.text-white{
+    color: #f5f5f5 !important;
+}
 .search-input {
     position: relative;
 }
