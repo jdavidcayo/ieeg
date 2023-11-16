@@ -1,4 +1,4 @@
-@extends('layouts.base')
+@extends('layouts.app')
 @section('content')
     <main>
         <p class="tit__man">MANUALES</p>

@@ -25,4 +25,6 @@ Route::resource('entrada', EntradaController::class);
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 Route::get('/inicio', [App\Http\Controllers\InicioController::class, 'index'])->name('inicio');
-
+Route::get('/manuales', [App\Http\Controllers\ManualesController::class, 'manuales'])->name('manuales');
+Route::get('/folletos', [App\Http\Controllers\FolletosContoller::class, 'folletos'])->name('folletos');
+Route::get('/documentos', [App\Http\Controllers\DocumentosController::class, 'documentos'])->name('documentos');

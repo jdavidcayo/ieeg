@@ -1,4 +1,4 @@
-@extends('layouts.base')
+@extends('layouts.app')
 @section('content')
     <div class="p-2">
         <div class="font-gothamBold text-xl text-gray-700 ml-4 ">FORMATOS</div>

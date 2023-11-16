@@ -70,7 +70,7 @@
         
 
             <div class="card text-bg-dark col-lg-4 border-0 rounded-0 p-0 " style="max-height: 300px; max-width: 350px">
-                <a href="/documentos" ">
+                <a href="/documentos">
                 <img src="{{ asset('assets/img/Mosaico-Documentos.png') }}" class="card-img img-fluid rounded-0 " alt="Manuales"
                 style="max-width: 350px">
                 <div class="card-img-overlay d-flex flex-column justify-content-end ">

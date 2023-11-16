@@ -18,9 +18,41 @@
     @vite(['resources/sass/app.scss', 'resources/js/app.js'])
     <link rel="stylesheet" href="{{ asset('assets/css/custom.css') }}">
     <link rel="stylesheet" href="{{ asset('assets/css/styles.css') }}">
+<style>
+.input-with-icon {
+    display: inline-block;
+    position: relative;
+    max-width: 315px;
+}
+ .busquedas {
+    padding: 10px 40px 10px 10px; 
+    border: 1px solid #ccc;
+    width:100%;
+    box-sizing: border-box;
+    border-radius: 100px;
+    height: 40px;
+
+}
+.lupa__button {
+    position: absolute;
+    right: 2px;
+    padding-right: 0px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: transparent;
+    border: none;
+    cursor: pointer;
+}
+.img__buscar {
+    width: 40px; 
+    height: auto;
+    margin: 2px 0 0 0;
+}
+</style>
 </head>
 
 <body>
+    <header>
     <div id="app">
         <nav class="navbar navbar-expand-md navbar-light bg-primary shadow-sm py-4">
             <div class="container col-lg-12">
@@ -31,22 +63,24 @@
                 <h5 class=" text-crema gothamB">Biblioteca Digital del Régimen Especial Sancionador</h5>
 
 
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-                    aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
                     <span class="navbar-toggler-icon"></span>
                 </button>
 
-
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <!-- Left Side Of Navbar -->
-                    <ul class="navbar-nav me-auto">
-
+                <div class="collapse navbar-collapse d-flex flex-column align-items-center" id="navbarSupportedContent">
+          
+                    <ul class="navbar-nav flex-column align-items-center d-md-none d-lg-none collapse" id="navbarSupportedContent">
+                        <li class="nav-item">MANUALES</li>
+                        <li class="nav-item">FOLLETOS</li>
+                        <li class="nav-item">FORMATOS</li>
+                        <li class="nav-item">CATÁLOGOS</li>
+                        <li class="nav-item">DOCUMENTOS</li>
+                        <li class="nav-item">COMPENDIOS</li>
+                        <li class="nav-item">CÁPSULAS</li>
                     </ul>
-
                     <!-- Right Side Of Navbar -->
                     <!-- Right Side Of Navbar -->
-                    <ul class="navbar-nav ms-auto">
+                    <ul class="navbar-nav mx-auto">
                         <!-- Authentication Links -->
                         @guest
                             @if (Route::has('login'))
@@ -81,11 +115,18 @@
                             </li>
                         @endguest
                     </ul>
-
+                    <div class="input-with-icon">
+                        <input class="busquedas" type="text" name="Busquedas" id="Busquedas" placeholder="Búsqueda">
+                        <button type="submit" class="lupa__button">
+                            <img class="img__buscar" src="{{ asset('assets/img/Buscar.png') }}" alt="Lupa">
+                        </button>
+                    </div>
                 </div>
-
             </div>
+
         </nav>
+
+    </header>
 
 
 
@@ -95,7 +136,7 @@
 
 
         <footer class="p-4 d-flex justify-content-center align-content-center " style="background-color: #dfdede">
-            <p class="text-secondary gothamText footer">IEEG 2018 - 800 433 4486 - Carretera Guanajuato Puentecillas km.
+            <p class="text-secondary gothamText footer" style="margin-top:40px">IEEG 2018 - 800 433 4486 - Carretera Guanajuato Puentecillas km.
                 2 + 767, Colonia Puentecillas - C.P. 36263 - Guanajuato, Gto. - Conmutador (473) 735-3000.</p>
         </footer>
 
