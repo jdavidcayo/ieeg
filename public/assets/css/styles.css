@@ -13,6 +13,11 @@
     src: url('../fonts/GothamBoldRegular.ttf');
 }
 
+* body {
+    font-family: 'gotham' !important;
+    height: 100%;
+}
+
 .gothamText {
     font-family: 'gotham' !important; 
 }

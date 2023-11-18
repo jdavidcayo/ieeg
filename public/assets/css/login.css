@@ -1,0 +1,15 @@
+body {
+  height: 100vh;
+  background-image: url("../img/Fondo-LogingContraseña.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  overflow: hidden  ;
+}
+
+.forgotText:hover {
+  color: rgb(255, 255, 255) !important;
+}
+
+.bg-warning-transparent {
+  background-color: rgba(243, 226, 215, 0.3) !important;
+}

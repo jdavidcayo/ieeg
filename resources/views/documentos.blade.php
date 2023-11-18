@@ -13,7 +13,7 @@
 <body>
     <header>
         <div id="app">
-            <nav class="navbar navbar-expand-md navbar-light bg-primary shadow-sm py-4">
+            <nav class="navbar navbar-expand-md navbar-light bg-primary shadow-sm">
                 <div class="container col-lg-12">
     
                     <a class="navbar-brand col-lg-2" href="{{ url('/inicio') }}">

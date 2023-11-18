@@ -1,50 +1,22 @@
-<div class="row justify-content-center">
-    <div class="col-md-8">
-        <div class="card border-top-2 border-bottom-2 border-0">
-            
-            <div class="card-body d-flex flex-column align-items-center">
-                <form method="POST" action="{{ route('login') }}" style="width: 400px">
-                    <img src="{{ asset('assets/img/Usuarui.png') }}" alt="Descripción de la imagen" class="img-fluid mx-auto d-block" width="150px">
-                    @csrf
-
-                    <div class="form-group row w-100 mx-auto" style="max-width: 400px;">
-                        <div class="col-md-12">
-                            <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus placeholder="Email">
-                            @error('email')
-                                <span class="invalid-feedback" role="alert">
-                                    <strong>{{ $message }}</strong>
-                                </span>
-                            @enderror
-                        </div>
-                    </div>
-
-                    <div class="form-group row w-100 mx-auto" style="max-width: 600px;">
-                        <div class="col-md-12">
-                            <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="current-password" placeholder="Password">
-                            @error('password')
-                                <span class="invalid-feedback" role="alert">
-                                    <strong>{{ $message }}</strong>
-                                </span>
-                            @enderror
-                        </div>
-                    </div>
-
-                    <div class="form-group row mb-0 justify-content-between">
-                        <div class="col-md-8">
-                            @if (Route::has('password.request'))
-                                <a class="btn btn-link text-end" href="{{ route('password.request') }}">
-                                    {{ __('Forgot Your Password?') }}
-                                </a>
-                            @endif
-                        </div>
-                        <div class="col-md-4">
-                            <button type="submit" class="btn btn-primary btn-block rounded-pill">
-                                {{ __('Login') }}
-                            </button>
-                        </div>
-                    </div>
-                </form>
-            </div>
-        </div>
+<div class="container">
+    <div class="row align-items-center" style="height: 100vh;">
+       <div>
+          <div class="search-input position-relative">
+             <input type="search" class="form-control form-control-lg ps-5" placeholder="Enter your query">
+             <svg xmlns="http://www.w3.org/2000/svg" class="position-absolute top-50 translate-middle-y search-icon" width="25" height="25" viewBox="0 0 20 20" fill="currentColor">
+                <path fill-rule="evenodd" d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z" clip-rule="evenodd" />
+             </svg>
+          </div>
+ 
+          <br>
+ 
+          <div class="password-input position-relative">
+             <input type="password" class="form-control form-control-lg" placeholder="Enter your password">
+             <svg xmlns="http://www.w3.org/2000/svg" class="position-absolute top-50 translate-middle-y eye-icon" width="25" height="25" viewBox="0 0 20 20" fill="currentColor">
+                <path d="M10 12a2 2 0 100-4 2 2 0 000 4z" />
+                <path fill-rule="evenodd" d="M.458 10C1.732 5.943 5.522 3 10 3s8.268 2.943 9.542 7c-1.274 4.057-5.064 7-9.542 7S1.732 14.057.458 10zM14 10a4 4 0 11-8 0 4 4 0 018 0z" clip-rule="evenodd" />
+             </svg>
+          </div>
+       </div>
     </div>
-</div>
+ </div>
