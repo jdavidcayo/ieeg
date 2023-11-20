@@ -1,71 +1,115 @@
 @extends('layouts.base')
 @section('content')
-    <section class="flex flex-wrap items-center justify-center p-4 bg-blanco">
-        
-        <div class="flex flex-col items-center justify-center bg-white rounded overflow-hidden shadow-md mb-4 mr-6">
-            <img class="h-52 object-cover" src="{{ asset('assets/img/Formato-DOCX.png') }}" alt="folleto" width="160px">
-            <div class="font-bold text-sm m-2 text-gray-600 font-gotham whitespace-pre-line">Título del formato xxx
-                xxxxxxxxxxxxxxxxxx</div>
-            <button
-                class="w-full bg-blanco text-morado border border-fucsia rounded-full font-gotham mb-2  hover:font-gothamBold hover:border-morado focus:font-gothamBold focus:border-morado ">DESCARGAR</button>
-        </div>
+<h3 class="text-secondary">FORMATOS</h3>
 
-        <div class="flex flex-col items-start bg-white rounded overflow-hidden shadow-md mb-4 mr-6">
-            <img class="h-52 object-cover" src="{{ asset('assets/img/Formato-PPTX.png') }}" alt="folleto" width="160px">
-            <div class="font-bold text-sm m-2 text-gray-600 font-gotham whitespace-pre-line">Título del formato xxx
-                xxxxxxxxxxxxxxxxxx</div>
-            <button
-                class="w-full bg-blanco text-morado border border-fucsia rounded-full font-gotham mb-2  hover:font-gothamBold hover:border-morado focus:font-gothamBold focus:border-morado">DESCARGAR</button>
-        </div>
-        <div class="flex flex-col items-start bg-white rounded overflow-hidden shadow-md mb-4 mr-6">
-            <img class="h-52 object-cover" src="{{ asset('assets/img/Formato-XLSX.png') }}" alt="folleto" width="160px">
-            <div class="font-bold text-sm m-2 text-gray-600 font-gotham whitespace-pre-line">Título del formato xxx
-                xxxxxxxxxxxxxxxxxx</div>
-            <button
-                class="w-full bg-blanco text-morado border border-fucsia rounded-full font-gotham mb-2  hover:font-gothamBold hover:border-morado focus:font-gothamBold focus:border-morado">DESCARGAR</button>
-        </div>
-        <div class="flex flex-col items-center justify-center bg-white rounded overflow-hidden shadow-md mb-4 mr-6">
-            <img class="h-52 object-cover" src="{{ asset('assets/img/Formato-DOCX.png') }}" alt="folleto" width="160px">
-            <div class="font-bold text-sm m-2 text-gray-600 font-gotham whitespace-pre-line">Título del formato xxx
-                xxxxxxxxxxxxxxxxxx</div>
-            <button
-                class="w-full bg-blanco text-morado border border-fucsia rounded-full font-gotham mb-2  hover:font-gothamBold hover:border-morado focus:font-gothamBold focus:border-morado ">DESCARGAR</button>
-        </div>
-        <div class="flex flex-col items-start bg-white rounded overflow-hidden shadow-md mb-4 mr-6">
-            <img class="h-52 object-cover" src="{{ asset('assets/img/Formato-PPTX.png') }}" alt="folleto" width="160px">
-            <div class="font-bold text-sm m-2 text-gray-600 font-gotham whitespace-pre-line">Título del formato xxx
-                xxxxxxxxxxxxxxxxxx</div>
-            <button
-                class="w-full bg-blanco text-morado border border-fucsia rounded-full font-gotham mb-2  hover:font-gothamBold hover:border-morado focus:font-gothamBold focus:border-morado">DESCARGAR</button>
-        </div>
-        <div class="flex flex-col items-start bg-white rounded overflow-hidden shadow-md mb-4 mr-6">
-            <img class="h-52 object-cover" src="{{ asset('assets/img/Formato-XLSX.png') }}" alt="folleto" width="160px">
-            <div class="font-bold text-sm m-2 text-gray-600 font-gotham whitespace-pre-line">Título del formato xxx
-                xxxxxxxxxxxxxxxxxx</div>
-            <button
-                class="w-full bg-blanco text-morado border border-fucsia rounded-full font-gotham mb-2  hover:font-gothamBold hover:border-morado focus:font-gothamBold focus:border-morado">DESCARGAR</button>
-        </div>
-        <div class="flex flex-col items-center justify-center bg-white rounded overflow-hidden shadow-md mb-4 mr-6">
-            <img class="h-52 object-cover" src="{{ asset('assets/img/Formato-DOCX.png') }}" alt="folleto" width="160px">
-            <div class="font-bold text-sm m-2 text-gray-600 font-gotham whitespace-pre-line">Título del formato xxx
-                xxxxxxxxxxxxxxxxxx</div>
-            <button
-                class="w-full bg-blanco text-morado border border-fucsia rounded-full font-gotham mb-2  hover:font-gothamBold hover:border-morado focus:font-gothamBold focus:border-morado ">DESCARGAR</button>
-        </div>
-        <div class="flex flex-col items-start bg-white rounded overflow-hidden shadow-md mb-4 mr-6">
-            <img class="h-52 object-cover" src="{{ asset('assets/img/Formato-PPTX.png') }}" alt="folleto" width="160px">
-            <div class="font-bold text-sm m-2 text-gray-600 font-gotham whitespace-pre-line">Título del formato xxx
-                xxxxxxxxxxxxxxxxxx</div>
-            <button
-                class="w-full bg-blanco text-morado border border-fucsia rounded-full font-gotham mb-2  hover:font-gothamBold hover:border-morado focus:font-gothamBold focus:border-morado">DESCARGAR</button>
-        </div>
-        <div class="flex flex-col items-start bg-white rounded overflow-hidden shadow-md mb-4 mr-6">
-            <img class="h-52 object-cover" src="{{ asset('assets/img/Formato-XLSX.png') }}" alt="folleto" width="160px">
-            <div class="font-bold text-sm m-2 text-gray-600 font-gotham whitespace-pre-line">Título del formato xxx
-                xxxxxxxxxxxxxxxxxx</div>
-            <button
-                class="w-full bg-blanco text-morado border border-fucsia rounded-full font-gotham mb-2  hover:font-gothamBold hover:border-morado focus:font-gothamBold focus:border-morado">DESCARGAR</button>
-        </div>
+    <div class="container mt-4">
+        <div class="row d-flex flex-wrap ">
 
-    </section>
+            <div class="col-lg-3 col-md-6 mb-4 cardEffect">
+                <div class="card align-items-center border-0 " style="width: 100%;">
+                    <img src="{{ asset('assets/img/Formato-PPTX.png') }}" class="" alt="Formato img" width="200px" height="200px">
+                    <h6 class="limitedText text-secondary mt-2">Título del formato xxx xxxxxxxx</h6>
+                    <a href="#">
+                        <button type="button" id="btnDescargar"
+                            class="btn btn-outline-primary btn-block btn-sm rounded-pill px-3">
+                            DESCARGAR
+                        </button>
+                    </a>
+                </div> 
+            </div>
+
+            <div class="col-lg-3 col-md-6 mb-4 cardEffect">
+                <div class="card align-items-center border-0 " style="width: 100%;">
+                    <img src="{{ asset('assets/img/Formato-XLSX.png') }}" class="" alt="Formato img" width="200px" height="200px">
+                    <h6 class="limitedText text-secondary mt-2">Título del formato xxx xxxxxxxx</h6>
+                    <a href="#">
+                        <button type="button" id="btnDescargar"
+                            class="btn btn-outline-primary btn-block btn-sm rounded-pill px-3">
+                            DESCARGAR
+                        </button>
+                    </a>
+                </div> 
+            </div>
+
+            <div class="col-lg-3 col-md-6 mb-4 cardEffect">
+                <div class="card align-items-center border-0 " style="width: 100%;">
+                    <img src="{{ asset('assets/img/Formato-DOCX.png') }}" class="" alt="Formato img" width="200px" height="200px">
+                    <h6 class="limitedText text-secondary mt-2">Título del formato xxx xxxxxxxx</h6>
+                    <a href="#">
+                        <button type="button" id="btnDescargar"
+                            class="btn btn-outline-primary btn-block btn-sm rounded-pill px-3">
+                            DESCARGAR
+                        </button>
+                    </a>
+                </div> 
+            </div>
+
+            <div class="col-lg-3 col-md-6 mb-4 cardEffect">
+                <div class="card align-items-center border-0 " style="width: 100%;">
+                    <img src="{{ asset('assets/img/Formato-PPTX.png') }}" class="" alt="Formato img" width="200px" height="200px">
+                    <h6 class="limitedText text-secondary mt-2">Título del formato xxx xxxxxxxx</h6>
+                    <a href="#">
+                        <button type="button" id="btnDescargar"
+                            class="btn btn-outline-primary btn-block btn-sm rounded-pill px-3">
+                            DESCARGAR
+                        </button>
+                    </a>
+                </div> 
+            </div>
+
+            <div class="col-lg-3 col-md-6 mb-4 cardEffect">
+                <div class="card align-items-center border-0 " style="width: 100%;">
+                    <img src="{{ asset('assets/img/Formato-DOCX.png') }}" class="" alt="Formato img" width="200px" height="200px">
+                    <h6 class="limitedText text-secondary mt-2">Título del formato xxx xxxxxxxx</h6>
+                    <a href="#">
+                        <button type="button" id="btnDescargar"
+                            class="btn btn-outline-primary btn-block btn-sm rounded-pill px-3">
+                            DESCARGAR
+                        </button>
+                    </a>
+                </div> 
+            </div>
+
+            <div class="col-lg-3 col-md-6 mb-4 cardEffect">
+                <div class="card align-items-center border-0 " style="width: 100%;">
+                    <img src="{{ asset('assets/img/Formato-PPTX.png') }}" class="" alt="Formato img" width="200px" height="200px">
+                    <h6 class="limitedText text-secondary mt-2">Título del formato xxx xxxxxxxx</h6>
+                    <a href="#">
+                        <button type="button" id="btnDescargar"
+                            class="btn btn-outline-primary btn-block btn-sm rounded-pill px-3">
+                            DESCARGAR
+                        </button>
+                    </a>
+                </div> 
+            </div>
+
+            <div class="col-lg-3 col-md-6 mb-4 cardEffect">
+                <div class="card align-items-center border-0 " style="width: 100%;">
+                    <img src="{{ asset('assets/img/Formato-PPTX.png') }}" class="" alt="Formato img" width="200px" height="200px">
+                    <h6 class="limitedText text-secondary mt-2">Título del formato xxx xxxxxxxx</h6>
+                    <a href="#">
+                        <button type="button" id="btnDescargar"
+                            class="btn btn-outline-primary btn-block btn-sm rounded-pill px-3">
+                            DESCARGAR
+                        </button>
+                    </a>
+                </div> 
+            </div>
+
+            <div class="col-lg-3 col-md-6 mb-4 cardEffect">
+                <div class="card align-items-center border-0 " style="width: 100%;">
+                    <img src="{{ asset('assets/img/Formato-PPTX.png') }}" class="" alt="Formato img" width="200px" height="200px">
+                    <h6 class="limitedText text-secondary mt-2">Título del formato xxx xxxxxxxx</h6>
+                    <a href="#">
+                        <button type="button" id="btnDescargar"
+                            class="btn btn-outline-primary btn-block btn-sm rounded-pill px-3">
+                            DESCARGAR
+                        </button>
+                    </a>
+                </div> 
+            </div>
+            
+        </div>
+    </div>
 @endsection
+

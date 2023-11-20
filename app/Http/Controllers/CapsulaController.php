@@ -5,11 +5,10 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Capsula;
 
-class InicioController extends Controller
+class CapsulaController extends Controller
 {
-    public function index()
-    {
+    public function index(){
         $capsulas = Capsula::all();
-        return view('inicio', compact('capsulas'));
+        return view('capsulas.index', compact('capsulas'));
     }
 }

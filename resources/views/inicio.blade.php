@@ -20,7 +20,7 @@
 
 
         <div class="card text-bg-dark col-lg-4 border-0 rounded-0 p-0 " style="max-height: 300px; max-width: 350px">
-            <a href="{{ route('folletos.index') }}">
+            <a href="{{ route('folleto.index') }}">
                 <img src="{{ asset('assets/img/Mosaico-Folletos.png') }}" class="card-img img-fluid rounded-0 "
                     alt="Manuales" style="max-width: 350px">
                 <div class="card-img-overlay d-flex flex-column justify-content-end ">
@@ -101,23 +101,21 @@
     <div id="carousel" class="carousel slide carousel-fade px-lg-5 my-2 d-flex align-items-center ">
         <div class="carousel-inner mx-lg-5">
 
-            <div class="carousel-item active">
+            @forelse ($capsulas as $capsula)
+            <div class="carousel-item @if ($loop->first) active @endif">
                 <div class="card p-5 border-0">
                     <div class="row">
+
                         <div class="col-md-6">
                             <!-- Video -->
-                            <iframe width="100%" height="315" src="https://www.youtube.com/embed/xt4CPCV_Fcc"
+                            <iframe width="100%" height="315" src="{{ $capsula->url }}}"
                                 frameborder="0" allowfullscreen></iframe>
                         </div>
                         <div class="col-md-6">
                             <!-- Contenido derecho -->
                             <div class="card-body">
-                                <h5 class="card-title">Título</h5>
-                                <p class="card-text">Descripción del video. En esta ocasión tenemos de invitada en
-                                    Voces de la Democracia a la Lic. Adriana Arroyo Florentino quien, con su
-                                    experiencia como integrante de la red de refugios y tallerista en temas de
-                                    violencia, nos invita a la reflexión sobre las modalidades y características de
-                                    la violencia, así como los principios de la cultura de la paz.</p>
+                                <h5 class="card-title">{{ $capsula->titulo}}</h5>
+                                <p class="card-text">{{ $capsula->descripcion }}</p>
                                 <hr>
                                 <p class="card-text"><small class="text-muted">Octubre 19, 2023</small></p>
                             </div>
@@ -125,59 +123,9 @@
                     </div>
                 </div>
             </div>
-
-
-            <div class="carousel-item">
-                <div class="card p-5 border-0">
-                    <div class="row">
-                        <div class="col-md-6">
-                            <!-- Video -->
-                            <iframe width="100%" height="315" src="https://www.youtube.com/embed/BlspNhSxkVc"
-                                frameborder="0" allowfullscreen></iframe>
-                        </div>
-                        <div class="col-md-6">
-                            <!-- Contenido derecho -->
-                            <div class="card-body">
-                                <h5 class="card-title">Título ASD</h5>
-                                <p class="card-text">Descripción del video. En esta ocasión tenemos de invitada en
-                                    Voces de la Democracia a la Lic. Adriana Arroyo Florentino quien, con su
-                                    experiencia como integrante de la red de refugios y tallerista en temas de
-                                    violencia, nos invita a la reflexión sobre las modalidades y características de
-                                    la violencia, así como los principios de la cultura de la paz.</p>
-                                <hr>
-                                <p class="card-text"><small class="text-muted">Octubre 19, 2023</small></p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="carousel-item">
-                <div class="card p-5 border-0">
-                    <div class="row">
-                        <div class="col-md-6">
-                            <!-- Video -->
-                            <iframe width="100%" height="315" src="https://www.youtube.com/embed/mbjzjDvlNY"
-                                frameborder="0" allowfullscreen></iframe>
-                        </div>
-                        <div class="col-md-6">
-                            <!-- Contenido derecho -->
-                            <div class="card-body">
-                                <h5 class="card-title">Título 343222</h5>
-                                <p class="card-text">Descripción del video. En esta ocasión tenemos de invitada en
-                                    Voces de la Democracia a la Lic. Adriana Arroyo Florentino quien, con su
-                                    experiencia como integrante de la red de refugios y tallerista en temas de
-                                    violencia, nos invita a la reflexión sobre las modalidades y características de
-                                    la violencia, así como los principios de la cultura de la paz.</p>
-                                <hr>
-                                <p class="card-text"><small class="text-muted">Octubre 19, 2023</small></p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-
+            @empty
+                <h3>NO HAY CAPSULAS POR MOSTRAR</h3>
+            @endforelse
 
         </div>
         <button class="carousel-control-prev" type="button" data-bs-target="#carousel" data-bs-slide="prev">
@@ -192,4 +140,14 @@
     <script src="{{ asset('assets/js/popper.min.js') }}"></script>
     <script src="{{ asset('assets/js/bootstrap.bundle.min.js') }}"></script>
     </div>
+
+    <div class="container d-flex flex-column  align-items-center ">
+        <a href="{{ route('capsula.index'); }}">
+            <button type="button" id="irACapsulas"
+                class="btn btn-outline-primary btn-block btn-sm rounded-pill px-3">
+                VER MAS
+            </button>
+        </a>
+    </div>
+
 @endsection

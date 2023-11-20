@@ -58,7 +58,7 @@
                             </a>
                         </li>
                         <li class="nav-item mx-4">
-                            <a href="{{ route('folletos.index') }}" class="text-decoration-none text-crema">
+                            <a href="{{ route('folleto.index') }}" class="text-decoration-none text-crema">
                                 FOLLETOS
                             </a>
                         </li>
@@ -78,7 +78,7 @@
                             </a>
                         </li>
                         <li class="nav-item mx-4">
-                            <a href="{{ route('capsulas.index') }}" class="text-decoration-none text-crema">
+                            <a href="{{ route('capsula.index') }}" class="text-decoration-none text-crema">
                                 CÁPSULAS
                             </a>
                         </li>

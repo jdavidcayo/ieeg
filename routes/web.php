@@ -18,18 +18,13 @@ use App\Http\Controllers\EntradaController;
 Route::get('/', function () {
     return view('auth.login');
 });
-Route::get('/capsula', function () {
-    return view('capsulas.index');
-});
-
 
 Auth::routes();
 
-// Route::resource('entrada', EntradaController::class);
-// Route::get('/capsulas', [App\Http\Controllers\CapsulasController::class, 'index'])->name('capsulas.index');
-Route::resource('/folletos', App\Http\Controllers\FolletosController::class);
-// Route::resource('/capsulas', App\Http\Controllers\CapsulasController::class);
-
+Route::get('/folleto', [App\Http\Controllers\FolletoController::class, 'index'])->name('folleto.index'); //Creado por problemas con folleto, averiguar
+Route::get('/capsula', [App\Http\Controllers\CapsulaController::class, 'index'])->name('capsula.index'); //Creado por problemas con folleto, averiguar
+// Route::resource('/folletos', App\Http\Controllers\FolletosController::class);
+// Route::resource('/capsulas', App\Http\Controllers\CapsulasController::class); 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 Route::get('/inicio', [App\Http\Controllers\InicioController::class, 'index'])->name('inicio');
 Route::resource('/documentos', App\Http\Controllers\DocumentosController::class); 
