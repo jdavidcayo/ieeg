@@ -4,14 +4,14 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-class FormatoController extends Controller
+class CompendiosController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
     public function index()
     {
-        return view('formats');
+        return view('compendios');
     }
 
     /**

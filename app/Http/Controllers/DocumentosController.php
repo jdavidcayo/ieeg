@@ -6,7 +6,7 @@ use Illuminate\Http\Request;
 
 class DocumentosController extends Controller
 {
-    public function documentos()
+    public function index()
     {
         return view('documentos');
     }

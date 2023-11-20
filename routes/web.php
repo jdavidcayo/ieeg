@@ -18,13 +18,22 @@ use App\Http\Controllers\EntradaController;
 Route::get('/', function () {
     return view('auth.login');
 });
+Route::get('/capsula', function () {
+    return view('capsulas.index');
+});
+
 
 Auth::routes();
 
-Route::resource('entrada', EntradaController::class);
+// Route::resource('entrada', EntradaController::class);
+// Route::get('/capsulas', [App\Http\Controllers\CapsulasController::class, 'index'])->name('capsulas.index');
+Route::resource('/folletos', App\Http\Controllers\FolletosController::class);
+// Route::resource('/capsulas', App\Http\Controllers\CapsulasController::class);
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 Route::get('/inicio', [App\Http\Controllers\InicioController::class, 'index'])->name('inicio');
-Route::get('/manuales', [App\Http\Controllers\ManualesController::class, 'manuales'])->name('manuales');
-Route::get('/folletos', [App\Http\Controllers\FolletosContoller::class, 'folletos'])->name('folletos');
-Route::get('/documentos', [App\Http\Controllers\DocumentosController::class, 'documentos'])->name('documentos');
+Route::resource('/documentos', App\Http\Controllers\DocumentosController::class); 
+Route::resource('/manuales', App\Http\Controllers\ManualesController::class);
+Route::resource('/formatos', App\Http\Controllers\FormatosController::class);
+Route::resource('/catalogos', App\Http\Controllers\CatalogosController::class);
+Route::resource('/compendios',  App\Http\Controllers\CompendiosController::class);

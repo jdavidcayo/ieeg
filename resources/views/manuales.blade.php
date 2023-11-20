@@ -1,83 +1,40 @@
-@extends('layouts.app')
+@extends('layouts.base')
 @section('content')
-    <main>
-        <p class="tit__man">MANUALES</p>
-        <div class="hojas">
-            <p>01/07</p>
-            <div class="flechas">
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                    class="bi bi-arrow-left" viewBox="0 0 16 16">
-                    <path fill-rule="evenodd"
-                        d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8z" />
-                </svg>
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                    class="bi bi-arrow-right" viewBox="0 0 16 16">
-                    <path fill-rule="evenodd"
-                        d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z" />
-                </svg>
+    <div class="container">
+        <h3 class="text-secondary ">MANUALES</h3>
+    </div>
+    <div class="container mt-4">
+
+        <div class="row">
+
+            @forelse ( $manuales as $manual)
+            <div class="col-lg-3 col-md-6 mb-4 cardEffect">
+                <div class="card align-items-center border-0" style="width: 100%;">
+                    <img src="{{ $manual->urlThumb }}" class="" alt="Manual img" width="100px" height="150px">
+                    <ul class="list-group list-group-flush align-items-center gothamB">
+                        <li class="list-group-item">
+                            <a href="{{ $manual->url }}" download="{{ $manual->titulo . ".pdf" }}">
+                                <button type="button"
+                                class="btn btn-warning text-white btn-block btn-sm rounded-pill px-3">DESCARGAR</button>
+                            </a>
+                        </li>
+                        <li class="list-group-item pt-0">
+                            <a href="/manuales/{{ $manual->id }}">
+                                <button type="button" id="btnVerPDF"
+                                    class="btn btn-outline-primary btn-block btn-sm rounded-pill px-3">
+                                    VER EN LÍNEA
+                                </button>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
             </div>
+                
+            @empty
+                <h4>NINGUN MANUAL POR MOSTRAR</h4>
+            @endforelse
+
+
         </div>
-        <section class="manuales">
-            <div class="manual">
-                <img class="img__manual" src="{{ asset('assets/img/inicio/Manual-Catalogo.png') }}" alt="manuales">
-                <button class="btn__descarga">DESCARGAR</button>
-                <button class="btn__ver">VER EN LINEA</button>
-            </div>
-            <div class="manual">
-                <img class="img__manual" src="{{ asset('assets/img/inicio/Manual-Catalogo.png') }}" alt="manuales">
-                <button class="btn__descarga">DESCARGAR</button>
-                <button class="btn__ver">VER EN LINEA</button>
-            </div>
-            <div class="manual">
-                <img class="img__manual" src="{{ asset('assets/img/inicio/Manual-Catalogo.png') }}" alt="manuales">
-                <button class="btn__descarga">DESCARGAR</button>
-                <button class="btn__ver">VER EN LINEA</button>
-            </div>
-            <div class="manual">
-                <img class="img__manual" src="{{ asset('assets/img/inicio/Manual-Catalogo.png') }}" alt="manuales">
-                <button class="btn__descarga">DESCARGAR</button>
-                <button class="btn__ver">VER EN LINEA</button>
-            </div>
-            <div class="manual">
-                <img class="img__manual" src="{{ asset('assets/img/inicio/Manual-Catalogo.png') }}" alt="manuales">
-                <button class="btn__descarga">DESCARGAR</button>
-                <button class="btn__ver">VER EN LINEA</button>
-            </div>
-            <div class="manual">
-                <img class="img__manual" src="{{ asset('assets/img/inicio/Manual-Catalogo.png') }}" alt="manuales">
-                <button class="btn__descarga">DESCARGAR</button>
-                <button class="btn__ver">VER EN LINEA</button>
-            </div>
-            <div class="manual">
-                <img class="img__manual" src="{{ asset('assets/img/inicio/Manual-Catalogo.png') }}" alt="manuales">
-                <button class="btn__descarga">DESCARGAR</button>
-                <button class="btn__ver">VER EN LINEA</button>
-            </div>
-            <div class="manual">
-                <img class="img__manual" src="{{ asset('assets/img/inicio/Manual-Catalogo.png') }}" alt="manuales">
-                <button class="btn__descarga">DESCARGAR</button>
-                <button class="btn__ver">VER EN LINEA</button>
-            </div>
-            <div class="manual">
-                <img class="img__manual" src="{{ asset('assets/img/inicio/Manual-Catalogo.png') }}" alt="manuales">
-                <button class="btn__descarga">DESCARGAR</button>
-                <button class="btn__ver">VER EN LINEA</button>
-            </div>
-            <div class="manual">
-                <img class="img__manual" src="{{ asset('assets/img/inicio/Manual-Catalogo.png') }}" alt="manuales">
-                <button class="btn__descarga">DESCARGAR</button>
-                <button class="btn__ver">VER EN LINEA</button>
-            </div>
-            <div class="manual">
-                <img class="img__manual" src="{{ asset('assets/img/inicio/Manual-Catalogo.png') }}" alt="manuales">
-                <button class="btn__descarga">DESCARGAR</button>
-                <button class="btn__ver">VER EN LINEA</button>
-            </div>
-            <div class="manual">
-                <img class="img__manual" src="{{ asset('assets/img/inicio/Manual-Catalogo.png') }}" alt="manuales">
-                <button class="btn__descarga">DESCARGAR</button>
-                <button class="btn__ver">VER EN LINEA</button>
-            </div>
-        </section>
-    </main>
-@endsection
+    </div>
+    @endsection

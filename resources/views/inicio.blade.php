@@ -2,99 +2,97 @@
 @section('content')
     <div class="row col-lg-12 justify-content-center align-content-center ">
 
-        
-            <div class="card text-bg-dark col-lg-4 border-0 rounded-0 p-0 " style="max-height: 300px; max-width: 350px">
-                <a href="/manuales">
-                    <img src="{{ asset('assets/img/Mosaico-Manuales.png') }}" class="card-img img-fluid rounded-0 " alt="Manuales"
-                    style="max-width: 350px">
-                    <div class="card-img-overlay d-flex flex-column justify-content-end ">
-                        <div class="d-flex align-items-end ">
-                            <img class="" src="{{ asset('assets/img/ICONO-Manuales.png') }}" alt="icono manuales"
-                            width="50px">
-                            <h5 class="card-title gothamR text-primary">MANUALES</h5>
-                        </div>
-                        <p class="card-text text-primary">Manuales de operación de apoyo para la integración de un procedimiento
-                            especial sancionador y las notificaciones en el instituto.</p>
-                        </div>
-                    </a>
-                </div>
-        
-
-        
         <div class="card text-bg-dark col-lg-4 border-0 rounded-0 p-0 " style="max-height: 300px; max-width: 350px">
-            <a href="/folletos">
-                <img src="{{ asset('assets/img/Mosaico-Folletos.png') }}" class="card-img img-fluid rounded-0 " alt="Manuales"
-                style="max-width: 350px">
+            <a href="{{ route('manuales.index') }}">
+                <img src="{{ asset('assets/img/Mosaico-Manuales.png') }}" class="card-img img-fluid rounded-0 " alt="Manuales"
+                    style="max-width: 350px">
                 <div class="card-img-overlay d-flex flex-column justify-content-end ">
                     <div class="d-flex align-items-end ">
-                        <img class="" src="{{ asset('assets/img/ICONO-Folletos.png') }}" alt="icono manuales"
-                        width="50px">
-                        <h5 class="card-title gothamR text-cream ">FOLLETOS</h5>
+                        <img class="" src="{{ asset('assets/img/ICONO-Manuales.png') }}" alt="icono manuales"
+                            width="50px">
+                        <h5 class="card-title gothamR text-primary">MANUALES</h5>
                     </div>
-                    
+                    <p class="card-text text-primary">Manuales de operación de apoyo para la integración de un procedimiento
+                        especial sancionador y las notificaciones en el instituto.</p>
                 </div>
             </a>
         </div>
-            
 
-        
-            <div class="card text-bg-dark col-lg-4 border-0 rounded-0 p-0 " style="max-height: 300px; max-width: 350px">
-                <a href="/formatos">
-                    <img src="{{ asset('assets/img/Mosaico-Formatos.png') }}" class="card-img img-fluid rounded-0 " alt="Manuales"
-                    style="max-width: 350px">
-                    <div class="card-img-overlay d-flex flex-column justify-content-end ">
-                        <div class="d-flex align-items-end ">
-                            <img class="" src="{{ asset('assets/img/ICONO-Formatos.png') }}" alt="icono manuales"
+
+        <div class="card text-bg-dark col-lg-4 border-0 rounded-0 p-0 " style="max-height: 300px; max-width: 350px">
+            <a href="{{ route('folletos.index') }}">
+                <img src="{{ asset('assets/img/Mosaico-Folletos.png') }}" class="card-img img-fluid rounded-0 "
+                    alt="Manuales" style="max-width: 350px">
+                <div class="card-img-overlay d-flex flex-column justify-content-end ">
+                    <div class="d-flex align-items-end ">
+                        <img class="" src="{{ asset('assets/img/ICONO-Folletos.png') }}" alt="icono manuales"
                             width="50px">
-                            <h5 class="card-title gothamR text-primary">FORMATOS</h5>
-                        </div>
-                    </div>    
-                </a>
-            </div>
-        
-        
-        
-            <div class="card text-bg-dark col-lg-4 border-0 rounded-0 p-0 " style="max-height: 300px; max-width: 350px">
-            <a href="/catalogos">
-                <img src="{{ asset('assets/img/Mosaico-Catalogos.png') }}" class="card-img img-fluid rounded-0 " alt="Manuales"
-                style="max-width: 350px">
+                        <h5 class="card-title gothamR text-cream ">FOLLETOS</h5>
+                    </div>
+
+                </div>
+            </a>
+        </div>
+
+
+
+        <div class="card text-bg-dark col-lg-4 border-0 rounded-0 p-0 " style="max-height: 300px; max-width: 350px">
+            <a href="{{ route('formatos.index') }}">
+                <img src="{{ asset('assets/img/Mosaico-Formatos.png') }}" class="card-img img-fluid rounded-0 "
+                    alt="Manuales" style="max-width: 350px">
+                <div class="card-img-overlay d-flex flex-column justify-content-end ">
+                    <div class="d-flex align-items-end ">
+                        <img class="" src="{{ asset('assets/img/ICONO-Formatos.png') }}" alt="icono manuales"
+                            width="50px">
+                        <h5 class="card-title gothamR text-primary">FORMATOS</h5>
+                    </div>
+                </div>
+            </a>
+        </div>
+
+
+
+        <div class="card text-bg-dark col-lg-4 border-0 rounded-0 p-0 " style="max-height: 300px; max-width: 350px">
+            <a href="{{ route('catalogos.index') }}">
+                <img src="{{ asset('assets/img/Mosaico-Catalogos.png') }}" class="card-img img-fluid rounded-0 "
+                    alt="Manuales" style="max-width: 350px">
                 <div class="card-img-overlay d-flex flex-column justify-content-end ">
                     <div class="d-flex align-items-end ">
                         <img class="" src="{{ asset('assets/img/ICONO-Catalogo.png') }}" alt="icono manuales"
-                        width="50px">
+                            width="50px">
                         <h5 class="card-title gothamR text-cream">CATALOGOS</h5>
                     </div>
                 </div>
             </a>
-            </div>
-        
+        </div>
 
-            <div class="card text-bg-dark col-lg-4 border-0 rounded-0 p-0 " style="max-height: 300px; max-width: 350px">
-                <a href="/documentos">
-                <img src="{{ asset('assets/img/Mosaico-Documentos.png') }}" class="card-img img-fluid rounded-0 " alt="Manuales"
-                style="max-width: 350px">
+
+        <div class="card text-bg-dark col-lg-4 border-0 rounded-0 p-0 " style="max-height: 300px; max-width: 350px">
+            <a href="{{ route('documentos.index') }}">
+                <img src="{{ asset('assets/img/Mosaico-Documentos.png') }}" class="card-img img-fluid rounded-0 "
+                    alt="Manuales" style="max-width: 350px">
                 <div class="card-img-overlay d-flex flex-column justify-content-end ">
                     <div class="d-flex align-items-end ">
                         <img class="" src="{{ asset('assets/img/ICONO-Documentos.png') }}" alt="icono manuales"
-                        width="50px">
+                            width="50px">
                         <h5 class="card-title gothamR text-primary">DOCUMENTOS</h5>
                     </div>
                 </div>
             </a>
-            </div>
+        </div>
 
-            <div class="card text-bg-dark col-lg-4 border-0 rounded-0 p-0 " style="max-height: 300px; max-width: 350px">
-                <a href="/compendios" >
-            <img src="{{ asset('assets/img/Mosaico-Compendios.png') }}" class="card-img img-fluid rounded-0 "
-                alt="Manuales" style="max-width: 350px">
-            <div class="card-img-overlay d-flex flex-column justify-content-end ">
-                <div class="d-flex align-items-end ">
-                    <img class="" src="{{ asset('assets/img/ICONO-Compendios.png') }}" alt="icono manuales"
-                        width="50px">
-                    <h5 class="card-title gothamR text-cream">COMPENDIOS</h5>
+        <div class="card text-bg-dark col-lg-4 border-0 rounded-0 p-0 " style="max-height: 300px; max-width: 350px">
+            <a href="{{ route('compendios.index') }}">
+                <img src="{{ asset('assets/img/Mosaico-Compendios.png') }}" class="card-img img-fluid rounded-0 "
+                    alt="Manuales" style="max-width: 350px">
+                <div class="card-img-overlay d-flex flex-column justify-content-end ">
+                    <div class="d-flex align-items-end ">
+                        <img class="" src="{{ asset('assets/img/ICONO-Compendios.png') }}" alt="icono manuales"
+                            width="50px">
+                        <h5 class="card-title gothamR text-cream">COMPENDIOS</h5>
+                    </div>
                 </div>
-            </div>
-        </a>
+            </a>
         </div>
 
     </div>
@@ -128,7 +126,7 @@
                 </div>
             </div>
 
-            
+
             <div class="carousel-item">
                 <div class="card p-5 border-0">
                     <div class="row">
@@ -193,5 +191,5 @@
     </div>
     <script src="{{ asset('assets/js/popper.min.js') }}"></script>
     <script src="{{ asset('assets/js/bootstrap.bundle.min.js') }}"></script>
-</div>
+    </div>
 @endsection
