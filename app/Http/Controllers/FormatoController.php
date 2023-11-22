@@ -3,16 +3,15 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\Manual;
 
-class CatalogosController extends Controller
+class FormatoController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
     public function index()
     {
-        return view('catalogos');
+        return view('formatos');
     }
 
     /**
@@ -36,8 +35,7 @@ class CatalogosController extends Controller
      */
     public function show(string $id)
     {
-        $manual = Manual::find($id);
-        return view('manual.show', compact('manual'));
+        //
     }
 
     /**

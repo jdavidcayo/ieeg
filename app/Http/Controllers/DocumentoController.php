@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-class DocumentosController extends Controller
+class DocumentoController extends Controller
 {
     public function index()
     {

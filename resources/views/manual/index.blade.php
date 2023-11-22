@@ -19,7 +19,7 @@
                             </a>
                         </li>
                         <li class="list-group-item pt-0">
-                            <a href="{{ route('manuales.show',['manuale'=> $manual->id])  }}">
+                            <a href="{{ route('manual.show',['manual'=> $manual->id])  }}">
                                 <button type="button" id="btnVerPDF"
                                     class="btn btn-outline-primary btn-block btn-sm rounded-pill px-3">
                                     VER EN LÍNEA

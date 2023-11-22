@@ -6,7 +6,7 @@
     </div>
     <div class="container d-flex flex-row justify-content-between ">
         <div class="d-flex flex-row">
-            <a href="{{ route('manuales.index') }}" class="d-flex flex-row">
+            <a href="{{ route('manual.index') }}" class="d-flex flex-row">
                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-grid-fill"
                     viewBox="0 0 16 16">
                     <path

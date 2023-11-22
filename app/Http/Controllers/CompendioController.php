@@ -3,17 +3,15 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\Capsula;
 
-class CapsulasController extends Controller
+class CompendioController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
     public function index()
     {
-        $capsulas = Capsula::all();
-        return view('capsulas.index');
+        return view('compendios');
     }
 
     /**

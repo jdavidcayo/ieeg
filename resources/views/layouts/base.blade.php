@@ -53,7 +53,7 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent2">
                     <ul class="navbar-nav mx-auto justify-content-center text-crema">
                         <li class="nav-item mx-4">
-                            <a href="{{ route('manuales.index') }}" class="text-decoration-none text-crema">
+                            <a href="{{ route('manual.index') }}" class="text-decoration-none text-crema">
                                 MANUALES
                             </a>
                         </li>
@@ -63,17 +63,17 @@
                             </a>
                         </li>
                         <li class="nav-item mx-4">
-                            <a href="{{ route('formatos.index') }}" class="text-decoration-none text-crema">
+                            <a href="{{ route('formato.index') }}" class="text-decoration-none text-crema">
                                 FORMATOS
                             </a>
                         </li>
                         <li class="nav-item mx-4">
-                            <a href="{{ route('catalogos.index') }}" class="text-decoration-none text-crema">
+                            <a href="{{ route('catalogo.index') }}" class="text-decoration-none text-crema">
                                 CATÁLOGOS
                             </a>
                         </li>
                         <li class="nav-item mx-4">
-                        <a href="{{ route('documentos.index') }}" class="text-decoration-none text-crema">
+                        <a href="{{ route('documento.index') }}" class="text-decoration-none text-crema">
                                 DOCUMENTOS
                             </a>
                         </li>

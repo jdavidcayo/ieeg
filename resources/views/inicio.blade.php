@@ -3,7 +3,7 @@
     <div class="row col-lg-12 justify-content-center align-content-center ">
 
         <div class="card text-bg-dark col-lg-4 border-0 rounded-0 p-0 " style="max-height: 300px; max-width: 350px">
-            <a href="{{ route('manuales.index') }}">
+            <a href="{{ route('manual.index') }}">
                 <img src="{{ asset('assets/img/Mosaico-Manuales.png') }}" class="card-img img-fluid rounded-0 " alt="Manuales"
                     style="max-width: 350px">
                 <div class="card-img-overlay d-flex flex-column justify-content-end ">
@@ -37,7 +37,7 @@
 
 
         <div class="card text-bg-dark col-lg-4 border-0 rounded-0 p-0 " style="max-height: 300px; max-width: 350px">
-            <a href="{{ route('formatos.index') }}">
+            <a href="{{ route('formato.index') }}">
                 <img src="{{ asset('assets/img/Mosaico-Formatos.png') }}" class="card-img img-fluid rounded-0 "
                     alt="Manuales" style="max-width: 350px">
                 <div class="card-img-overlay d-flex flex-column justify-content-end ">
@@ -53,7 +53,7 @@
 
 
         <div class="card text-bg-dark col-lg-4 border-0 rounded-0 p-0 " style="max-height: 300px; max-width: 350px">
-            <a href="{{ route('catalogos.index') }}">
+            <a href="{{ route('catalogo.index') }}">
                 <img src="{{ asset('assets/img/Mosaico-Catalogos.png') }}" class="card-img img-fluid rounded-0 "
                     alt="Manuales" style="max-width: 350px">
                 <div class="card-img-overlay d-flex flex-column justify-content-end ">
@@ -68,7 +68,7 @@
 
 
         <div class="card text-bg-dark col-lg-4 border-0 rounded-0 p-0 " style="max-height: 300px; max-width: 350px">
-            <a href="{{ route('documentos.index') }}">
+            <a href="{{ route('documento.index') }}">
                 <img src="{{ asset('assets/img/Mosaico-Documentos.png') }}" class="card-img img-fluid rounded-0 "
                     alt="Manuales" style="max-width: 350px">
                 <div class="card-img-overlay d-flex flex-column justify-content-end ">
@@ -82,7 +82,7 @@
         </div>
 
         <div class="card text-bg-dark col-lg-4 border-0 rounded-0 p-0 " style="max-height: 300px; max-width: 350px">
-            <a href="{{ route('compendios.index') }}">
+            <a href="{{ route('compendio.index') }}">
                 <img src="{{ asset('assets/img/Mosaico-Compendios.png') }}" class="card-img img-fluid rounded-0 "
                     alt="Manuales" style="max-width: 350px">
                 <div class="card-img-overlay d-flex flex-column justify-content-end ">

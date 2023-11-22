@@ -43,21 +43,31 @@
                             <label for="password" class="col-md-4 col-form-label text-md-end">{{ __('Password') }}</label>
 
                             <div class="col-md-6">
-                                <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="new-password">
 
-                                @error('password')
+                                <input id="password" type="text" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="new-password">
+                                <button id="btnGenerador" class="btn btn-outline-primary btn-xxsm">GENERAR CONTRASEÑA</button>
+
+                                {{-- @error('password')
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
                                     </span>
-                                @enderror
+                                @enderror --}}
                             </div>
                         </div>
 
                         <div class="row mb-3">
-                            <label for="password-confirm" class="col-md-4 col-form-label text-md-end">{{ __('Confirm Password') }}</label>
+                            <label for="password-confirm" class="col-md-4 col-form-label text-md-end">Organización</label>
 
                             <div class="col-md-6">
-                                <input id="password-confirm" type="password" class="form-control" name="password_confirmation" required autocomplete="new-password">
+                                <input id="organizacion" type="text" class="form-control" name="organizacion" required placeholder="organizacion">
+                            </div>
+                        </div>
+
+                        <div class="row mb-3">
+                            <label for="password-confirm" class="col-md-4 col-form-label text-md-end">Rol</label>
+
+                            <div class="col-md-6">
+                                <input id="rol" type="number" class="form-control" name="rol" required >
                             </div>
                         </div>
 
@@ -74,4 +84,15 @@
         </div>
     </div>
 </div>
+<script>
+    document.getElementById('btnGenerador').addEventListener('click', function() {
+        fetch('/generarpwd')
+            .then(response => response.json())
+            .then(data => {
+                console.console.log(data);
+                // document.getElementById('password').value = data.password;
+            })
+            .catch(error => console.error('Error:', error));
+    });
+</script>
 @endsection
