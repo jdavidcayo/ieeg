@@ -43,7 +43,7 @@
             </div>
             <hr>
             <div class="d-flex flex-column align-items-center ">
-                <iframe src="{{ $manual->url }}" frameborder="0" width="80%" height="900px"></iframe>
+                <iframe src="{{ asset($manual->url) }}" frameborder="0" width="80%" height="900px"></iframe>
             </div>
         </div>
     @endsection
